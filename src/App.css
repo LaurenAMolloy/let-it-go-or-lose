@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Shared colors */
+  --color-success: #00cc99;
+  --color-error: #ff4d4d;
+
+  /* Default to Ice Mode (Light Theme) */
+  --bg-color: #e6f7ff;
+  --card-bg: #ffffff;
+  --accent-primary: #00bfff;
+  --accent-secondary: #4d88ff;
+  --text-primary: #003366;
+  --text-secondary: #4d88ff;
+}
+
+body.winter-mode {
+  --bg-color: #0a0f1c;
+  --card-bg: #1f2a44;
+  --accent-primary: #5ddcff;
+  --accent-secondary: #a2c2dc;
+  --text-primary: #e0f7fa;
+  --text-secondary: #a2c2dc;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+.statusDiv {
+  background-color: var(--color-success);
+  width: 50%;
+  margin: 1rem auto;
+  padding: .8rem;
+  border-radius: .5rem;
+}
