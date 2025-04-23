@@ -2,6 +2,8 @@ import './App.css'
 import { Header } from './components'
 import { Status } from './components'
 import { Chips } from './components'
+import { Word } from './components'
+import { Keyboard } from './components'
 
 function App() {
   
@@ -10,6 +12,8 @@ function App() {
     <Header />
     <Status />
     <Chips />
+    <Word />
+    <Keyboard />
     </>
   )
 }

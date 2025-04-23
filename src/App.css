@@ -16,6 +16,25 @@
   --accent-secondary: #4d88ff;
   --text-primary: #003366;
   --text-secondary: #4d88ff;
+
+  /* Keyboard Colors - Ice Mode */
+  --key-bg: #d4f1ff;
+  /* default key background */
+  --key-text: #003366;
+  /* default key text */
+  --key-correct: #00cc99;
+  /* correct letter */
+  --key-wrong: #ff4d4d;
+  /* incorrect letter */
+  --key-guessed: #99ccff;
+  /* guessed but not correct */
+
+  --new-game-bg: #00bfff;
+  /* bright ice blue */
+  --new-game-hover: #009acd;
+  /* deeper blue on hover */
+  --new-game-text: #ffffff;
+  /* white text */
 }
 
 body.winter-mode {
@@ -25,12 +44,28 @@ body.winter-mode {
   --accent-secondary: #a2c2dc;
   --text-primary: #e0f7fa;
   --text-secondary: #a2c2dc;
+
+  /* Keyboard Colors - Winter Mode */
+  --key-bg: #1e2b40;
+  /* default key background */
+  --key-text: #e0f7fa;
+  /* key text color */
+  --key-correct: #00cc99;
+  --key-wrong: #ff4d4d;
+  --key-guessed: #3d5a80;
+  /* guessed but not correct */
+
+  --new-game-bg: #5ddcff;
+  /* glowing frosty blue */
+  --new-game-hover: #37b5e5;
+  /* icy electric on hover */
+  --new-game-text: #0a0f1c;
 }
 
 body {
   margin: 0;
-  font-family: "Hanken Grotesk", Arial, sans-serif;
-  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--card-bg);
   color: var(--text-primary);
   padding: 20px;
   height: 100vh;
@@ -45,8 +80,102 @@ h1 {
 
 .statusDiv {
   background-color: var(--color-success);
+  color: var(--card-bg);
   width: 50%;
   margin: 1rem auto;
   padding: .8rem;
   border-radius: .5rem;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
+
+.chips-container {
+  display: flex;
+  justify-content: center;
+}
+
+.character-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 375px;
+}
+
+.chip {
+  margin: 0 .8rem .5rem 0;
+  padding: .4rem .8rem;
+  border-radius: .5rem;
+}
+
+.chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.chip {
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.word-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2px
+}
+
+.letterEl {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: .5rem;
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.keyboard {
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 375px;
+  gap: .3rem;
+}
+
+.keyboardBtn {
+  padding: .4rem;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  border: 1px solid var(--accent-primary);
+  background-color: var(--key-bg);
+  font-family: inherit;
+  border-radius: .5rem;
+  color: var(--key-text)
+}
+
+.keyboard.correct {
+  background-color: var(--key-correct);
+}
+
+.keyboard.wrong {
+  background-color: var(--key-wrong);
+}
+
+.keyboard.guessed {
+  background-color: var(--key-guessed);
+}
+
+.newGameBtn {
+  margin-top: 1rem;
+  background-color: var(--new-game-bg);
+  color: var(--new-game-text);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newGameBtn:hover {
+  background-color: var(--new-game-hover);
 }

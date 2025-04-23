@@ -1,3 +1,5 @@
-export { default as Header} from './Header';
-export { default as Status } from './Status';
-export { default as Chips} from './Chips';
+export { default as Header} from './Header'
+export { default as Status } from './Status'
+export { default as Chips} from './Chips'
+export { default as Word } from './Word'
+export { default as Keyboard} from './Keyboard'

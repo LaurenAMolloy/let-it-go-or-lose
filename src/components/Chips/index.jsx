@@ -1,5 +1,6 @@
 import React from 'react'
 import { frozenCharacters } from '../../assets/characters'
+import { nanoid } from 'nanoid'
 
 export default function Chips() {
     console.log(frozenCharacters)
@@ -10,15 +11,17 @@ export default function Chips() {
     }
     return (
         <span style={styles} 
-        className = "chip">{character.name}</span>
+        className = "chip"
+        key = {nanoid()}
+        >{character.name}</span>
     )
 })
 
   return (
-    <section className ="chips">
-        <p className="character-chips">
+    <section className ="chips-container">
+        <div className="character-chips">
             {chipEl} 
-        </p>
+        </div>
     </section>
   )
 }
