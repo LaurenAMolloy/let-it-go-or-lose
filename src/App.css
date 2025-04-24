@@ -152,15 +152,15 @@ h1 {
   color: var(--key-text)
 }
 
-.keyboard.correct {
+.keyboardBtn.correct {
   background-color: var(--key-correct);
 }
 
-.keyboard.wrong {
+.keyboardBtn.wrong {
   background-color: var(--key-wrong);
 }
 
-.keyboard.guessed {
+.keyboardBtn.guessed {
   background-color: var(--key-guessed);
 }
 
