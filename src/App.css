@@ -78,9 +78,33 @@ h1 {
   padding-bottom: 1rem;
 }
 
-.statusDiv {
+.status {
+  height: 100px;
+}
+
+.statusDiv.won {
   background-color: var(--color-success);
   color: var(--card-bg);
+  width: 50%;
+  margin: 0 auto;
+  padding: .8rem;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
+
+.statusDiv.lost {
+  background-color: var(--color-error);
+  color: var(--card-bg);
+  width: 50%;
+  margin: 1rem auto;
+  padding: .8rem;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
+
+.statusDiv.farewell {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
   width: 50%;
   margin: 1rem auto;
   padding: .8rem;
@@ -100,7 +124,10 @@ h1 {
   max-width: 375px;
 }
 
-.chip {
+span.chip {
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
   margin: 0 .8rem .5rem 0;
   padding: .4rem .8rem;
   border-radius: .5rem;
@@ -115,6 +142,20 @@ h1 {
 .chip {
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+span.chip.lost::before {
+  content: "❄️";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .word-container {

@@ -6,7 +6,7 @@ const WordContext = createContext()
 //Wrap the theme provider
 export const WordProvider = ({children}) => {
     //initial state for theme
-    const [ word, setWord ] = useState("React");
+    const [ word, setWord ] = useState("react");
 
     return (
         <WordContext.Provider  value ={{ word, setWord }}>

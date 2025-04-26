@@ -1,13 +1,13 @@
-import { useState  } from 'react'
 import { nanoid } from 'nanoid'
 import { useWord } from '../../Contexts/Word'
 
-export default function Word() {
+export default function Word({guessedLetters}) {
     const { word } = useWord()
+    //Conditionally render letters from word
 
     const letterElements = word.split("")
     .map(letter => <span className='letterEl' key = {nanoid()}>
-            {letter.toUpperCase()}
+            {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
         </span> 
         )
         
