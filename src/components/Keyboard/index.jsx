@@ -1,16 +1,15 @@
 import React from 'react'
 import { nanoid } from 'nanoid';
 import { useWord } from '../../Contexts/Word';
+import { useGuess } from '../../Contexts/GuessedLetters';
 import { clsx } from 'clsx';
-import { getFarewellText } from '../../assets/utils';
+import { randomWord } from "../../assets/utils";
 
-
-export default function Keyboard( {guessedLetters, setGuessedLetters, isGameOver}) {
+export default function Keyboard() {
 
     //Context
-    const { word } = useWord();
-    console.log(guessedLetters)
-
+    const { word, setWord } = useWord();
+    const { guessedLetters, setGuessedLetters, isGameOver } = useGuess();
     //Static values
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -20,7 +19,12 @@ export default function Keyboard( {guessedLetters, setGuessedLetters, isGameOver
       setGuessedLetters(prevLetters => 
         prevLetters.includes(letter) ? prevLetters : [...prevLetters, letter]
       )
-      }
+    }
+    
+    function handleResetGame(){
+      setGuessedLetters([]);
+      setWord(() =>randomWord());
+    }
      
     const keys = alphabet.toString().split("").map(letter => {
       //variables for guesses
@@ -38,6 +42,7 @@ export default function Keyboard( {guessedLetters, setGuessedLetters, isGameOver
         className={clsx("keyboardBtn", className)} 
         key={nanoid()}
         value={letter}
+        disabled = {isGameOver}
         onClick={() => handleClick(letter)}
         >{letter}
         </button>
@@ -48,7 +53,7 @@ export default function Keyboard( {guessedLetters, setGuessedLetters, isGameOver
   return (
     <section className="keyboard">
         {keys}
-        {isGameOver &&<button className="newGameBtn">New Game</button>}
+        {isGameOver &&<button className="newGameBtn" onClick={handleResetGame}>New Game</button>}
     </section>
 
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { useGuess } from '../../Contexts/GuessedLetters'
 
 /**
  * Backlog:
@@ -12,29 +13,31 @@ import clsx from 'clsx'
  */
  
 
-export default function Status( {isGameWon, isGameLost, isGameOver, isLastGuessedWrong }) {
+export default function Status() {
+    const {isGameWon, isGameLost, isGameOver, isLastGuessedWrong} = useGuess(); 
 
     const className = clsx({
-    won: isGameWon,
-    lost: isGameLost,
-    over: isGameOver,
-    farewell: !isGameOver && isLastGuessedWrong
+      won: isGameWon,
+      lost: isGameLost,
+      over: isGameOver,
+      farewell: !isGameOver && isLastGuessedWrong
     })
 
     function renderGameStatus() {
       if(!isGameOver && isLastGuessedWrong) {
         return <p className='farewell'>Bye</p>
       }
-      if (isGameWon) {
+      else if (isGameWon) {
         return (
          <h2>You Win</h2>
         ) 
-      } if(isGameLost) {
+      } else if (isGameLost) {
         return (
           <h2>You lose</h2>
         )
-      } 
-      return null 
+      } else {
+        return null 
+      }
     }  
 
   return (

@@ -11,11 +11,17 @@
 
   /* Default to Ice Mode (Light Theme) */
   --bg-color: #e6f7ff;
+  /* Ice background */
   --card-bg: #ffffff;
-  --accent-primary: #00bfff;
-  --accent-secondary: #4d88ff;
+  /* White cards */
+  --accent-primary: #008b8b;
+  /* Dark Turquoise Header */
+  --accent-secondary: #9370db;
+  /* Purple Accent */
   --text-primary: #003366;
-  --text-secondary: #4d88ff;
+  /* Deep blue for main text */
+  --text-secondary: #9370db;
+  /* Purple for secondary text */
 
   /* Keyboard Colors - Ice Mode */
   --key-bg: #d4f1ff;
@@ -29,21 +35,33 @@
   --key-guessed: #99ccff;
   /* guessed but not correct */
 
-  --new-game-bg: #00bfff;
-  /* bright ice blue */
-  --new-game-hover: #009acd;
-  /* deeper blue on hover */
+  --new-game-bg: #008b8b;
+  /* dark turquoise button */
+  --new-game-hover: #006666;
+  /* darker turquoise on hover */
   --new-game-text: #ffffff;
   /* white text */
+
+  /* Light (Ice Mode) */
+  --toggle-bg: #8416ef;
+
+  --toggle-hover: #11e7db;
+
 }
 
 body.winter-mode {
   --bg-color: #0a0f1c;
+  /* Deep navy background */
   --card-bg: #1f2a44;
-  --accent-primary: #5ddcff;
-  --accent-secondary: #a2c2dc;
+  /* Dark blue cards */
+  --accent-primary: #008b8b;
+  /* Dark turquoise */
+  --accent-secondary: #9370db;
+  /* Purple accent */
   --text-primary: #e0f7fa;
-  --text-secondary: #a2c2dc;
+  /* Very light blue text */
+  --text-secondary: #9370db;
+  /* Purple secondary text */
 
   /* Keyboard Colors - Winter Mode */
   --key-bg: #1e2b40;
@@ -51,31 +69,118 @@ body.winter-mode {
   --key-text: #e0f7fa;
   /* key text color */
   --key-correct: #00cc99;
+  /* correct letter */
   --key-wrong: #ff4d4d;
-  --key-guessed: #3d5a80;
-  /* guessed but not correct */
+  /* incorrect letter */
+  --key-guessed: #5d779a;
+  /* muted steel blue for guessed */
 
-  --new-game-bg: #5ddcff;
-  /* glowing frosty blue */
-  --new-game-hover: #37b5e5;
-  /* icy electric on hover */
-  --new-game-text: #0a0f1c;
+  --new-game-bg: #008b8b;
+  /* dark turquoise button */
+  --new-game-hover: #006666;
+  /* deeper turquoise on hover */
+  --new-game-text: #e0f7fa;
+  /* frosty light text */
+
+  --toggle-bg: #4ef1f1;
+  --toggle-hover: #006666;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: var(--card-bg);
   color: var(--text-primary);
-  padding: 20px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
+nav {
+  background-color: var(--accent-primary);
+  color: var(--new-game-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 1rem;
+
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  color: var(--new-game-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--toggle-hover);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.enter-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enterBtn {
+  margin-top: 1rem;
+  background-color: var(--new-game-bg);
+  color: var(--new-game-text);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enterBtn:hover {
+  background-color: var(--new-game-hover);
+}
+
 h1 {
   padding-bottom: 1rem;
+}
+
+.themeToggle {
+  background-color: var(--toggle-bg);
+  color: var(--card-bg);
+  font-family: inherit;
+  border: none;
+  padding: .5rem .8rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.themeToggle:hover {
+  background-color: var(--toggle-hover);
+  color: var(--key-text)
 }
 
 .status {
@@ -86,7 +191,7 @@ h1 {
   background-color: var(--color-success);
   color: var(--card-bg);
   width: 50%;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: .8rem;
   border-radius: .5rem;
   box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
@@ -168,8 +273,12 @@ span.chip.lost::before {
 .letterEl {
   background-color: var(--bg-color);
   padding: 1rem;
-  border-radius: .5rem;
   border-bottom: 2px solid var(--text-primary);
+}
+
+.keyboard>button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .keyboard {

@@ -1,42 +1,65 @@
 export const frozenCharacters = [
     {
         name: "Elsa",
-        backgroundColor: "#5DDCFF", // icy blue
-        color: "#1E1E1E",           // dark for contrast
+        backgroundColorLight: "#5DDCFF", // Light turquoise
+        backgroundColorDark: "#008B8B",  // Dark turquoise
+        colorLight: "#1E1E1E",            // Dark text for light background
+        colorDark: "#E0F7FA",             // Light text for dark background
     },
     {
         name: "Anna",
-        backgroundColor: "#B72E3D", // warm cranberry red (like her cape)
-        color: "#F9F4DA",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Olaf",
-        backgroundColor: "#FFFFFF", // snowman white
-        color: "#333333",           // dark gray for legibility
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Kristoff",
-        backgroundColor: "#7A5C3D", // rugged brown (like his outfit)
-        color: "#F9F4DA",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Sven",
-        backgroundColor: "#A89F91", // reindeer fur neutral tone
-        color: "#1E1E1E",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Hans",
-        backgroundColor: "#2D519F", // royal blue (and secretly dark)
-        color: "#F9F4DA",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Marshmallow",
-        backgroundColor: "#DFF9FF", // icy white-blue
-        color: "#1E1E1E",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
     {
         name: "Oaken",
-        backgroundColor: "#DAB06B", // warm wood tones (like his shop)
-        color: "#1E1E1E",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
+    },
+    {
+        name: "Arrendale",
+        backgroundColorLight: "#5DDCFF",
+        backgroundColorDark: "#008B8B",
+        colorLight: "#1E1E1E",
+        colorDark: "#E0F7FA",
     },
 ];

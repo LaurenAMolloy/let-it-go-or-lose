@@ -1,3 +1,11 @@
+import { easyWords } from './words'
+
+//function to grab random word
+export function randomWord(){
+    const randNum = Math.floor(Math.random() * easyWords.length);
+    return easyWords[randNum]
+}
+
 export function getFarewellText(character) {
     const options = [
         `Let it go, ${character}`,

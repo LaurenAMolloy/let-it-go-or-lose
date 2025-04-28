@@ -1,8 +1,10 @@
 import { nanoid } from 'nanoid'
-import { useWord } from '../../Contexts/Word'
+import { useWord } from '../../Contexts/Word';
+import { useGuess } from '../../Contexts/GuessedLetters';
 
-export default function Word({guessedLetters}) {
+export default function Word() {
     const { word } = useWord()
+    const { guessedLetters } = useGuess(); 
     //Conditionally render letters from word
 
     const letterElements = word.split("")

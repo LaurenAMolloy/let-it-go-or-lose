@@ -1,4 +1,5 @@
 import { useContext, createContext, useState } from "react";
+import { randomWord } from '../assets/utils'
 
 //Create Context
 const WordContext = createContext()
@@ -6,7 +7,7 @@ const WordContext = createContext()
 //Wrap the theme provider
 export const WordProvider = ({children}) => {
     //initial state for theme
-    const [ word, setWord ] = useState("react");
+    const [ word, setWord ] = useState(()=>randomWord());
 
     return (
         <WordContext.Provider  value ={{ word, setWord }}>
