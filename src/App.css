@@ -44,8 +44,12 @@
 
   /* Light (Ice Mode) */
   --toggle-bg: #8416ef;
-
   --toggle-hover: #11e7db;
+
+  --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  --chip-bg: #5DDCFF;
+  --chip-text: #1E1E1E;
 
 }
 
@@ -84,7 +88,14 @@ body.winter-mode {
 
   --toggle-bg: #4ef1f1;
   --toggle-hover: #006666;
+
+  --box-shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.6);
+
+  --chip-bg: #4ef1f1;
+  /* --chip-text: #E0F7FA;  */
+
 }
+
 
 html,
 body,
@@ -113,8 +124,13 @@ nav {
   justify-content: space-between;
   gap: 10px;
   padding: 1rem;
-
 }
+
+.winter-mode nav {
+  background-color: #1b1f3a;
+  color: white;
+}
+
 
 .nav {
   display: flex;
@@ -141,8 +157,12 @@ nav a:hover {
   width: 50px;
 }
 
+body.winter-mode .logo {
+  content: url('./assets/img/snowflake-dark.png');
+}
+
 .enter-page {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,8 +184,13 @@ nav a:hover {
   background-color: var(--new-game-hover);
 }
 
+.enter-title {
+  padding-top: 3rem;
+
+}
+
 h1 {
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .themeToggle {
@@ -210,7 +235,7 @@ h1 {
 .statusDiv.farewell {
   background-color: var(--card-bg);
   color: var(--text-primary);
-  width: 50%;
+  width: 75%;
   margin: 1rem auto;
   padding: .8rem;
   border-radius: .5rem;
@@ -236,6 +261,9 @@ span.chip {
   margin: 0 .8rem .5rem 0;
   padding: .4rem .8rem;
   border-radius: .5rem;
+  border: 2px solid var(--accent-primary);
+  background-color: var(--chip-bg);
+  color: var(--chip-text);
 }
 
 .chip:hover {
@@ -274,6 +302,10 @@ span.chip.lost::before {
   background-color: var(--bg-color);
   padding: 1rem;
   border-bottom: 2px solid var(--text-primary);
+}
+
+.missed-letter {
+  color: var(--color-error)
 }
 
 .keyboard>button:disabled {
@@ -328,4 +360,34 @@ span.chip.lost::before {
 
 .newGameBtn:hover {
   background-color: var(--new-game-hover);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.rules {
+  border: 2px solid var(--accent-secondary);
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  width: 70%;
+  padding: 2rem 1rem;
+  box-shadow: var(--box-shadow-light);
+  text-align: left;
+  margin-top: 1rem
+}
+
+.rules li {
+  list-style: none;
+  padding-bottom: .5rem;
+  font-weight: 500;
+}
+
+.rules span {
+  font-size: 1.5rem;
+  font-weight: bold;
 }

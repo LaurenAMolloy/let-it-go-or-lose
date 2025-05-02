@@ -11,15 +11,10 @@ export default function Chips() {
         //boolean is the count bigger than the index?
         const isLostCharacter = index < wrongGuessCount
 
-        const styles = {
-            backgroundColor: character.backgroundColorLight,
-            color: character.color
-        }
-
         const className = clsx("chip", isLostCharacter && "lost")
 
         return (
-            <span style={styles} 
+            <span  
             className = {className}
             key = {nanoid()}
             >{character.name}</span>

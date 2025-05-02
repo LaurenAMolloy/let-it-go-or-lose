@@ -1,20 +1,12 @@
 import React from 'react'
 import clsx from 'clsx'
 import { useGuess } from '../../Contexts/GuessedLetters'
+import { getFarewellText } from '../../assets/utils';
+import { frozenCharacters } from '../../assets/characters';
 
-/**
- * Backlog:
- * --Farewell messages in status
- * --Fix a11y issues
- * --Make the new game button work
- * --Choose a random word from a list
- * --Snow drop when the user loses
- * --Confetti when the user wins 
- */
- 
 
 export default function Status() {
-    const {isGameWon, isGameLost, isGameOver, isLastGuessedWrong} = useGuess(); 
+    const {isGameWon, isGameLost, isGameOver, isLastGuessedWrong, wrongGuessCount} = useGuess(); 
 
     const className = clsx({
       won: isGameWon,
@@ -22,10 +14,11 @@ export default function Status() {
       over: isGameOver,
       farewell: !isGameOver && isLastGuessedWrong
     })
-
+    
+    //The character passed has got to match the chip
     function renderGameStatus() {
       if(!isGameOver && isLastGuessedWrong) {
-        return <p className='farewell'>Bye</p>
+        return <p className='farewell'>{getFarewellText(frozenCharacters[wrongGuessCount -1].name)}</p>
       }
       else if (isGameWon) {
         return (

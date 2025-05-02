@@ -4,6 +4,10 @@ import { useWord } from '../../Contexts/Word';
 import { useGuess } from '../../Contexts/GuessedLetters';
 import { clsx } from 'clsx';
 import { randomWord } from "../../assets/utils";
+import { useSound } from 'use-sound';
+console.log(useSound)
+import iceSfx  from '../../assets/iceSfx.mp3'
+
 
 export default function Keyboard() {
 
@@ -11,6 +15,7 @@ export default function Keyboard() {
     const { word, setWord } = useWord();
     const { guessedLetters, setGuessedLetters, isGameOver } = useGuess();
     //Static values
+    const [play] = useSound( iceSfx);
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
     function handleClick(letter) {
@@ -43,7 +48,10 @@ export default function Keyboard() {
         key={nanoid()}
         value={letter}
         disabled = {isGameOver}
-        onClick={() => handleClick(letter)}
+        onClick={() => {
+          handleClick(letter)
+          play()
+        }} 
         >{letter}
         </button>
         )
