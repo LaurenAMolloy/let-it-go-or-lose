@@ -102,6 +102,7 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 
@@ -114,6 +115,11 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+#tsparticles {
+  z-index: -1;
+  pointer-events: none;
 }
 
 nav {
