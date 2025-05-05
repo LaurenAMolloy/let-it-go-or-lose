@@ -1,23 +1,16 @@
 import React from 'react'
-import { useTheme } from '../../Contexts/Theme';
+import { ThemeBtn } from '../../components'
 
 
 export default function AboutPage() {
 
-  const {theme, setTheme} = useTheme();
-
-  function handleToggle() {
-    console.log("click")
-    setTheme(!theme)
-  }
+ 
 
   return (
     <>
     <div className="about-container">
     <h1>How To Play...</h1>
-    <button onClick={handleToggle} className="themeToggle">
-      {theme ? "Ice Mode" : "Winter Mode"}
-      </button>
+    <ThemeBtn />
     <div className="rules">
     <ul>
       <li>Try to guess the random word</li>

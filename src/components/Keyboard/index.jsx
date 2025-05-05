@@ -5,7 +5,6 @@ import { useGuess } from '../../Contexts/GuessedLetters';
 import { clsx } from 'clsx';
 import { randomWord } from "../../assets/utils";
 import { useSound } from 'use-sound';
-console.log(useSound)
 import iceSfx  from '../../assets/iceSfx.mp3'
 
 
@@ -48,6 +47,8 @@ export default function Keyboard() {
         key={nanoid()}
         value={letter}
         disabled = {isGameOver}
+        aria-disabled={guessedLetters.includes(letter)}
+        aria-label={letter}
         onClick={() => {
           handleClick(letter)
           play()

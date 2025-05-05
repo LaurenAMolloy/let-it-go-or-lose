@@ -5,10 +5,11 @@ import * as Pages from './pages';
 import Nav from './layouts/Nav';
 import { useTheme } from './Contexts/Theme';
 import ParticlesBackground from './components/Particles';
+import { useGuess } from './Contexts/GuessedLetters';
 
 function App() {
-
   const { theme } = useTheme();
+  const { isGameWon} = useGuess()
   //use effect watches theme and applies class to body
   useEffect(() => {
     document.body.className = theme ? "winter-mode" : ""
@@ -16,7 +17,7 @@ function App() {
   
   return (
     <> 
-      <ParticlesBackground />
+      { !isGameWon && <ParticlesBackground />}
       <Nav />
       <Routes>
         {/* All of my routes go here! */}

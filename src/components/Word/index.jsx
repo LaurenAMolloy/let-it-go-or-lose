@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 export default function Word() {
     const { word } = useWord()
-    const { guessedLetters, isGameLost } = useGuess(); 
+    const { guessedLetters, isGameLost, numGuessesRemaining, lastGuess } = useGuess(); 
 
     // Ensure word is not empty or undefined
     if (!word) {
@@ -32,8 +32,27 @@ export default function Word() {
       })
         
   return (
-    <div className ="word-container">
+    <>
+    <section className ="word-container">
         {letterElements}
-    </div>
+    </section>
+
+    
+     {/* Combined visually-hidden aria-live region for status updates */}
+    <section 
+    className="sr-only" 
+    aria-live="polite"
+    role="status"
+    >
+      <p>
+      {word.includes(lastGuess) ? 
+      `Correct! The letter ${lastGuess} is in the word` :
+      `Sorry, the letter ${lastGuess} is not in the word`}
+       You have {numGuessesRemaining} attempts left.
+    </p>
+
+     <p>Current Word: {word.split("").map(letter => guessedLetters.includes(letter) ? letter + "." : "blank.").join("")}</p>
+    </section>
+    </>
   )
 }

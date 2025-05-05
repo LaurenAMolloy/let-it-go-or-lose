@@ -13,6 +13,7 @@ export const GuessedProvider = ({children}) => {
     const [ guessedLetters, setGuessedLetters ] = useState([]);
 
     //Derived values
+    const numGuessesRemaining = frozenCharacters.length -1
     const wrongGuessCount = guessedLetters.filter((letter) => {
         return !word.includes(letter)
     }).length
@@ -28,7 +29,7 @@ export const GuessedProvider = ({children}) => {
     const isLastGuessedWrong = lastGuess && !word.includes(lastGuess)
 
     return (
-        <GuessedContext.Provider value ={{ guessedLetters, setGuessedLetters, wrongGuessCount, isGameLost, isGameOver, isGameWon, lastGuess, isLastGuessedWrong }}>
+        <GuessedContext.Provider value ={{ guessedLetters, setGuessedLetters, wrongGuessCount, isGameLost, isGameOver, isGameWon, lastGuess, isLastGuessedWrong, numGuessesRemaining }}>
             {children}
         </GuessedContext.Provider>
     )

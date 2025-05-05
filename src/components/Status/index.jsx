@@ -35,7 +35,9 @@ export default function Status() {
 
   return (
     <section className = "status">
-      <div className = {clsx("statusDiv", className)}>
+      <div 
+      aria-live="polite" 
+      role="status" className = {clsx("statusDiv", className)}>
         {renderGameStatus()}
       </div> 
     </section>

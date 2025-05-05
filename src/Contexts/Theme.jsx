@@ -6,7 +6,7 @@ const ThemeContext = createContext()
 //Wrap the theme provider
 export const ThemeProvider = ({children}) => {
     //initial state for theme
-    const [ theme, setTheme ] = useState(false);
+    const [ theme, setTheme ] = useState(!localStorage.getItem("theme") ? false : JSON.parse(localStorage.getItem("theme")));
 
     return (
         <ThemeContext.Provider  value ={{ theme, setTheme }}>
