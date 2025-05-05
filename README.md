@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/LaurenAMolloy/let-it-go-or-lose)
-- Live Site URL: (https://laurenamolloy.github.io/blog-preview-card-main/)
+- Live Site URL: (https://let-it-go-or-lose.onrender.com/)
 
 ### Built with
 
