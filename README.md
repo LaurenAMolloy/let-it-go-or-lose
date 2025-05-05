@@ -1,4 +1,4 @@
-# Let It Go Or Lose - A mash up of guess the word game from the Scrimba React Course
+# Let It Go Or Lose - A fun "Frozen" themed game based on the classic guess the word!
 
 ## Table of contents
 
@@ -28,7 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/img/let_it_go.png)
+![](./src/assets/img/enter_dark.png)
+![](./src/assets/img/winter_mode.png)
+![](./src/assets/img/ice_mode.png)
 
 ### Links
 
