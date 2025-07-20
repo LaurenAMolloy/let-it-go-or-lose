@@ -14,7 +14,7 @@
 
 ## Overview
 
-This original project that this game is based on was part of the React Basics Course. I have made quite a few changes to the oroginal game to practice skills I learnt during the course and beyond. The main changes I made were adding the Frozen theme and color palette, updating the list of guessing words to include cvc words for younger players, changing the losing messages, adding dark mode, an enter page and a how to play page.
+This original project that this game is based on was part of the React Basics Course. I have made quite a few changes to the original game to practice skills I learnt during the course and beyond. The main changes I made were adding the Frozen theme and color palette, updating the list of guessing words to include cvc words for younger players, changing the losing messages, adding dark mode, an enter page and a how to play page.
 
 ### The challenge
 
