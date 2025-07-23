@@ -14,7 +14,7 @@
 
 ## Overview
 
-This original project that this game is based on was part of the React Basics Course. I have made quite a few changes to the original game to practice skills I learnt during the course and beyond. The main changes I made were adding the Frozen theme and color palette, updating the list of guessing words to include cvc words for younger players, changing the losing messages, adding dark mode, an enter page and a how to play page.
+This project is a twist on the classic, Guess the Word. I have made quite a few changes to the original game. The main changes I made were adding the Frozen theme and color palette, updating the list of guessing words to include cvc words for younger players, changing the losing messages, adding dark mode, an enter page and a how to play page.
 
 ### The challenge
 
@@ -46,18 +46,16 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 
-### What I learned
+### Skills 
 
-I have learnt so many new skills and concepts during the build of this project. This was my second capstone project in React. I learnt about reusability, useContext, useEffect, useState React Router, layouts, how to use values derived from state and much more.
+I have practiced so many skills and concepts during the build of this project. I utilised React Hooks and concepts such as reusability, useContext, useEffect, useState React Router, layouts, how to use values derived from state and much more.
 
 ### Continued development
 
-Moving forward I would like to continue learning about reusability, further my understanding of React Router and experiment more with integrating data from API's into React projects.
+Moving forward I would like to continue learning about reusability, further my understanding of React Router and create more MPA's.
 
 ### Useful resources
 
 - [tsParticles](https://particles.js.org/) - This helped me to implement the snow effect.
 
 - [useSound Hook by Josh Comeau](https://www.joshwcomeau.com/react/announcing-use-sound-react-hook/) - This helped me bring my app alive by adding subtle sound effects.
-
-Thanks to my tutor Sarah Soutoul for your patience and support and to Scrimba for making great learning resources.
