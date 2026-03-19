@@ -1,4 +1,5 @@
-# Let It Go Or Lose - A fun "Frozen" themed game based on the classic guess the word!
+# 🎮 Let It Go or Lose 
+## A gamified early literacy experience using CVC word recognition
 
 ## Table of contents
 
@@ -14,17 +15,47 @@
 
 ## Overview
 
-This project is a twist on the classic, Guess the Word. I have made quite a few changes to the original game. The main changes I made were adding the Frozen theme and color palette, updating the list of guessing words to include cvc words for younger players, changing the losing messages, adding dark mode, an enter page and a how to play page.
+Let It Go or Lose is an interactive, game-based learning experience designed to support early readers in practicing CVC (consonant-vowel-consonant) word recognition.
 
-### The challenge
+Inspired by the classic “guess the word” format, this project reimagines the experience as a play-based learning tool, combining simple game mechanics, visual feedback, and repetition to reinforce foundational literacy skills.
 
-Users should be able to:
+The game incorporates a themed, engaging interface and age-appropriate word selection to support independent learning and sustained engagement.
 
-- Enter the game
-- Toggle between ice and winter mode
-- Use the keyboard to guess letters
-- See wrong guessed letters turn red on the keyboard
-- See the correct guesses appear
+## Learning Objective
+
+- Reinforce recognition and recall of CVC words
+- Support early phonics development through repetition and interaction
+- Encourage active participation and self-correction
+
+## Game Design Features
+
+- Interactive letter selection using keyboard input
+
+Immediate visual feedback:
+
+- Correct guesses revealed in context
+- Incorrect guesses highlighted in red
+- Themed modes (“Ice” and “Winter”) to increase engagement
+
+Structured progression through word challenges
+
+“How to Play” onboarding screen for accessibility
+
+Light/dark mode for usability
+
+## Design Approach
+
+This project was designed using principles of:
+
+Gamification (challenge, feedback, replayability)
+
+User-centered design for young learners
+
+Scaffolded learning, with controlled vocabulary (CVC words)
+
+Clear feedback loops to support independent progress
+
+The goal was to create an experience that balances fun and learning, where interaction directly reinforces understanding.
 
 ### Screenshot
 
@@ -45,14 +76,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-
-### Skills 
-
-I have practiced so many skills and concepts during the build of this project. I utilised React Hooks and concepts such as reusability, useContext, useEffect, useState React Router, layouts, how to use values derived from state and much more.
-
-### Continued development
-
-Moving forward I would like to continue learning about reusability, further my understanding of React Router and create more MPA's.
 
 ### Useful resources
 
